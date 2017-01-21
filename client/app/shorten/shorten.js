@@ -11,8 +11,8 @@ angular.module('shortly.shorten', [])
       $scope.loading = false;
     })
     .catch(function(error) {
-      console.log(error)
-    })
-  }
+      console.log(error);
+    });
+  };
   
 });

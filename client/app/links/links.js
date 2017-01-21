@@ -12,6 +12,6 @@ angular.module('shortly.links', [])
       console.log(error);
     });
     
-  }
+  };
   doSomethingToLinks();
 });

@@ -9,12 +9,7 @@ angular.module('shortly.services', [])
       data: links
     })
     .then(function (res) {
-      var resArray = res.data;
-      var linksArray = [];
-      resArray.forEach(function(obj) {
-        linksArray.push(obj);
-      });
-      return linksArray;
+      return res.data;
     });
   };
   

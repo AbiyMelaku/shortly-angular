@@ -23,6 +23,9 @@ angular.module('shortly', [
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
+    })
+    .otherwise({
+      redirectTo: '/links'
     });
     
     // We add our $httpInterceptor into the array
@@ -56,7 +59,7 @@ angular.module('shortly', [
   // if it's not valid, we then redirect back to signin/signup
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
     if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
-      $location.path('#/signin');
+      $location.path('/signin');
     }
   });
 });
